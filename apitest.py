@@ -43,7 +43,7 @@ class SemanticService:
         :return: JSON results
         """
         results = []
-        url = self.__nameUrl__.format(Type=type, Name=name)
+        url = self.__nameUrl__.format(Type=type, Name=name, ApiKey=self.__key__)
         try:
             hdr = {
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
