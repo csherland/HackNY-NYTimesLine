@@ -39,3 +39,9 @@ Thumbs.db
 # NYTimes specific Files #
 ##########################
 *.keys
+
+# Pycharm Specific #
+##########################
+*.idea/
+other.xml
+testrunner.xml
