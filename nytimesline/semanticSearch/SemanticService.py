@@ -15,7 +15,7 @@ class SemanticService:
 
 
     def __init__(self, key):
-        self.__key__ = key
+        self.__ApiKey__ = key
 
 
     def SemanticSearch(self, query):
@@ -24,7 +24,7 @@ class SemanticService:
         related to the query term
         """
         results = []
-        url = self.__searchUrl__.format(Query=query, ApiKey=self.__key__)
+        url = self.__searchUrl__.format(Query=query, ApiKey=self.__ApiKey__)
         try:
             hdr = {
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
@@ -44,7 +44,7 @@ class SemanticService:
         Get content from NYT Semantic API for content name
         """
         results = []
-        url = self.__nameUrl__.format(Type=type, Name=name, ApiKey=self.__key__)
+        url = self.__nameUrl__.format(Type=type, Name=name, ApiKey=self.__ApiKey__)
         try:
             hdr = {
                 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',

@@ -16,9 +16,10 @@ class TimelineService:
 		else:
 			self.__S__ = S(self.__ApiKey__)
 
-	def ProcessQuery(query):
+	def ProcessQuery(self, query):
 		print "Processing query: " + query
 		print "Searching for similar content names..."
-		search = __S__.SemanticSearch(query)
+		search = self.__S__.SemanticSearch(query)
+		print search
 		print "Prioritizing content names..."
 		print "Getting articles..."
