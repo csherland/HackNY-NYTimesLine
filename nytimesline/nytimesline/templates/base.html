@@ -14,11 +14,12 @@
 		<h1 align="center">NYTimesLine</h1>
 		
 		<div class="searchBox">
+			<form action="/getTimeline" method="get">
+  				Search a category: <input type="text" name="searchQuery"><br>
+  				<input type="submit" value="Submit">
+			</form>
 			<input id="searchTimeline" type="search" />
-		</div>
-	
-		<div class="buttonHolder">
-  			<input value="Search" title="Search" type="submit" id="btn_s"> 
+			<input value="Search" title="Search" type="submit" id="btn_s"> 
 		</div>
 		
 		<div class="content">
