@@ -1,6 +1,6 @@
 from django.db import models
 
-class Article(model.Models):
+class Article(models.Models):
     date = models.DateTimeField()
     title = models.SlugField(max_length=255)
     picURL = models.URLField(max_length=511)
