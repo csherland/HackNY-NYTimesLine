@@ -19,7 +19,11 @@ class TimelineService:
 	def ProcessQuery(self, query):
 		print "Processing query: " + query
 		print "Searching for similar content names..."
-		search = self.__S__.SemanticSearch(query)
-		print search
+		searches = self.__S__.SemanticSearch(query)
+		print searches
 		print "Prioritizing content names..."
-		print "Getting articles..."
+		concept = self.__S__.ChooseName(searches)
+		print concept
+		print "Getting articles for concept: " + concept[u'concept_name']
+		articles = self.__S__.SemanticName(concept[u'concept_type'], concept[u'concept_name'])
+		print articles

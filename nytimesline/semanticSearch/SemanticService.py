@@ -1,5 +1,6 @@
 import json
 import urllib2
+import random
 
 
 class SemanticService:
@@ -57,3 +58,6 @@ class SemanticService:
         except urllib2.URLError, e:
             print e.message
             return results
+
+    def ChooseName(self, searches):
+        return searches[random.randint(0,len(searches)-1)]
