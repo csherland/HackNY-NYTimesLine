@@ -70,7 +70,6 @@ class SemanticService:
     #     # articles = results["article_list"]["results"]
     #     # total = results["article_list"]["total"]
 
-    #     # print '######################################'
     #     # print articles
     #     # print '######################################'
     #     # print total
