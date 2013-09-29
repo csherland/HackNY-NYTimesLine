@@ -6,7 +6,7 @@ function submitAjaxQuery(event)
         event.cancel = true;
 
 	var queryForm = $('#queryForm').serialize();
-
+	alert(queryForm);
     if (!queryForm) { //No query val
     	return;
     }

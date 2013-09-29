@@ -7,6 +7,6 @@ def index(request):
 	return render(request, 'semanticSearch/index.html',{})
 
 def timeline(request):
-	timeline = json.dumps(['foo'])
+	query = request.POST.get('searchQuery')
+	timeline = json.dumps([query])
 	return HttpResponse(timeline, content_type='application/json')
-	#return render(request, 'semanticSearch/index2.html',{'timeline':timeline})
