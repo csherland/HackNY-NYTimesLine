@@ -28,3 +28,4 @@ class TimelineService:
 		# articles = self.__S__.SemanticArticles(concept[u'concept_type'], concept[u'concept_name'], 10)
 		timeline = self.__S__.ArticlesByDate(query)
 		print timeline
+		return timeline

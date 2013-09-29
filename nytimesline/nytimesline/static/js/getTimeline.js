@@ -16,8 +16,11 @@ function submitAjaxQuery(event)
   		url: "/getTimeline",
   		data: queryForm,
   		success: function(data) {
-        			var myvalues = [10,8,5,7,4,4,1];
-        			$('#dynamicsparkline').sparkline(myvalues, {
+                    var hits = [];
+                    for(var i = 0; i < data.length; i++){
+                        hits[i] = data[i]["hits"];
+                    }
+        			$('#dynamicsparkline').sparkline(hits, {
         				type: 'line',
         				width:'80%', 
         				fillColor:'rgba(55,0,0,.05)',

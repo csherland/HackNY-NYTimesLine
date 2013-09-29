@@ -29,7 +29,7 @@ class SemanticService:
         results = []
         url = self.__articleUrl__.format(Query=query, Begin=begin, End=end, ApiKey=self.__ApiKey__)
         url = url.replace(' ','%20')
-        print url
+        # print url
         try:
             req = urllib2.Request(url, headers=self.__hdr__)
             jsonResponse = urllib2.urlopen(req)
