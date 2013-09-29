@@ -6,7 +6,9 @@
 			{% block title %}{% endblock %}
 		</title>
 	
-		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/base.css"> 	
+		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/base.css"/>
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+		<script src="{{STATIC_URL}}js/getTimeline.js"></script> 	
 	</head>
 	
 	
@@ -14,11 +16,11 @@
 		<h1 align="center">NYTimesLine</h1>
 		
 		<div class="searchBox">
-			<input id="searchTimeline" type="search" />
-		</div>
-	
-		<div class="buttonHolder">
-  			<input value="Search" title="Search" type="submit" id="btn_s"> 
+			<form id="queryForm" onsubmit="submitAjaxQuery(event)">
+  				Search a category: <input type="text" name="searchQuery"><br>
+  				<input type="submit" value="Submit">
+  				{% csrf_token %}
+			</form>
 		</div>
 		
 		<div class="content">
