@@ -25,5 +25,5 @@ class TimelineService:
 		concept = self.__S__.ChooseName(searches)
 		print concept
 		print "Getting articles for concept: " + concept[u'concept_name']
-		articles = self.__S__.SemanticName(concept[u'concept_type'], concept[u'concept_name'])
+		articles = self.__S__.SemanticArticles(concept[u'concept_type'], concept[u'concept_name'], rateLimit)
 		print articles
