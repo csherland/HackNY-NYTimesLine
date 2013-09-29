@@ -71,7 +71,6 @@ class SemanticService:
     #     # total = results["article_list"]["total"]
 
     #     # print articles
-    #     # print '######################################'
     #     # print total
 
     #     results = self.ArticleSearch(name,page)
