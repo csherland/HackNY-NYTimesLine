@@ -3,10 +3,21 @@ html {
 }
 
 body {
-	background-color:#b0c4de;
+	font-family: 'Raleway', sans-serif;
+	background-image:url('../img/project_papper.png');
 	height: 100%;
 }
 
 .searchBox {
+	text-align: center;
+}
+
+#graph {
+	width: 90%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.graphPar {
 	text-align: center;
 }

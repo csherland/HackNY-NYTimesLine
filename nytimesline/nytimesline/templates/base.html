@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+	
 	<head>
 		<meta charset="utf-8">
 		<title>
@@ -7,9 +8,7 @@
 		</title>
 	
 		<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/base.css"/>
-		<script src="http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js"></script>
-		<script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="{{STATIC_URL}}js/getTimeline.js"></script> 	
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 	</head>
 	
 	<body>
@@ -22,10 +21,19 @@
   				{% csrf_token %}
 			</form>
 		</div>
-		
+	
+		<div id="Graph">
+			<p class="graphPar"><span id="dynamicsparkline"></span></p>
+		</div>
+
 		<div class="content">
 			{% block content %}
 			{% endblock %}
 		</div>
 	</body>
+	
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js"></script>
+	<script src="{{STATIC_URL}}js/getTimeline.js"></script> 
+
 </html>
