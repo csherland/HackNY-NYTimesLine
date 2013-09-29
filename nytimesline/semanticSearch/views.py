@@ -11,5 +11,4 @@ def timeline(request):
 	query = request.POST.get('searchQuery')
 	t = T()
 	timeline = json.dumps(t.ProcessQuery(query))
-#	timeline = json.dumps([query])
 	return HttpResponse(timeline, content_type='application/json')
