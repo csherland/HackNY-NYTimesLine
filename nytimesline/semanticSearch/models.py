@@ -4,6 +4,7 @@ import urllib2
 
 
 class SemanticService:
+
     __searchUrl__ = "http://api.nytimes.com/svc/semantic/v2/concept/search.json?query={Query}&api-key={Api-key}"
     __nameUrl__ = "http://api.nytimes.com/svc/semantic/v2/concept/name/{Type}/{Name}?fields=all&api-key={Api-key}"
     _Type_ = {
@@ -13,8 +14,12 @@ class SemanticService:
         "descriptor": "nytd_des"
     }
 
+
+
     def __init__(self, key):
         self.__key__ = key
+
+
 
     def SemanticSearch(self, query):
         """
@@ -35,6 +40,8 @@ class SemanticService:
         except urllib2.URLError, e:
             print e.message
             return results
+
+
 
     def SemanticName(self, type, name):
         """
