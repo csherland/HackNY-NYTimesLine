@@ -21,6 +21,7 @@ function submitAjaxQuery(event)
         				type: 'line',
         				width:'80%', 
         				fillColor:'rgba(55,0,0,.05)',
+        				spotRadius:'5',
         				height:'50%'});
     			}
 	});
