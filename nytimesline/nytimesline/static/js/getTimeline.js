@@ -5,17 +5,16 @@ function submitAjaxQuery(event)
     else
         event.cancel = true;
 
-    // run ajax calling function here.
-    var queryVal = $("#searchQuery").val();
+	var queryForm = $('#queryForm').serialize();
 
-    if (!queryVal) { //No query val
+    if (!queryForm) { //No query val
     	return;
     }
     
     $.ajax({
   		type: "POST",
   		url: "/getTimeline",
-  		data: {query : queryVal},
+  		data: queryForm,
 	});
 }
 

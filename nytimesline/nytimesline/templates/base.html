@@ -16,9 +16,10 @@
 		<h1 align="center">NYTimesLine</h1>
 		
 		<div class="searchBox">
-			<form onsubmit="submitAjaxQuery(event)" method="get">
+			<form id="queryForm" onsubmit="submitAjaxQuery(event)">
   				Search a category: <input type="text" name="searchQuery"><br>
   				<input type="submit" value="Submit">
+  				{% csrf_token %}
 			</form>
 		</div>
 		
