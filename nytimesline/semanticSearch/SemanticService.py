@@ -56,7 +56,10 @@ class SemanticService:
                 'hits': results["meta"]["hits"]
                 })
 
-        return timeline
+        chronological = []
+        for t in reversed(timeline):
+            chronological.append(t)
+        return chronological
 
     # def SemanticArticles(self, type, name, hitLimit):
     # def SemanticArticles(self, name, hitLimit):
