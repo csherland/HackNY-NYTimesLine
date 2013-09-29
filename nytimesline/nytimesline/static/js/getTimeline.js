@@ -6,11 +6,16 @@ function submitAjaxQuery(event)
         event.cancel = true;
 
     // run ajax calling function here.
+    var queryVal = $("#searchQuery").val();
+
+    if (!queryVal) { //No query val
+    	return;
+    }
+    
     $.ajax({
   		type: "POST",
   		url: "/getTimeline",
-  		data: {query : event.text},
-  		success: success,
+  		data: {query : queryVal},
 	});
 }
 
