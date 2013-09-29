@@ -1,5 +1,4 @@
-__author__ = 'phadke'
-
+from django.db import models
 import json
 import urllib2
 
@@ -57,44 +56,3 @@ class SemanticService:
             print e.message
             return results
 
-    # def ParseJsonAllBookLists(self, bookLists):
-    #     """
-    #     Parses JSON list of all book lists into list of BookList
-    #     :param bookLists Json list of all book lists from NYT api
-    #     :return: [BookList]
-    #     """
-    #     parsedBookLists = []
-    #     for bookList in bookLists:
-    #         listKey = bookList["list_name"].replace(' ', '-').lower()
-    #         displayName = bookList["display_name"]
-    #         parsedBookLists.append(BookList(ListKey=listKey,DisplayName=displayName))
-    #     return parsedBookLists
-    #
-    # def BulkSaveBookLists(self, bookLists):
-    #     for bookList in bookLists:
-    #         try:
-    #             BookList.objects.get_or_create(ListKey=bookList.ListKey,
-    #                                            DisplayName=bookList.DisplayName)
-    #         except Exception as e:
-    #             print(e)
-    #             raise e
-    #
-    # def GetAllBookLists(self):
-    #     """
-    #     Gets all BookLists from DB
-    #     :return: [BookList]
-    #     """
-    #     return BookList.objects.all()
-    #
-    # def LoadBookListCache(self, allBookLists):
-    #     for bookList in allBookLists:
-    #         self.BookListCache[bookList.ListKey] = bookList.DisplayName
-    #
-    # def RefreshCache(self):
-    #     jsonResults = self.GetJsonAllBookLists()
-    #     parsedResults = self.ParseJsonAllBookLists(jsonResults)
-    #     if parsedResults:
-    #         self.BulkSaveBookLists(parsedResults)
-    #     if parsedResults and not self.BookListCache:
-    #         allBookLists = self.GetAllBookLists()
-    #         self.LoadBookListCache(allBookLists)
